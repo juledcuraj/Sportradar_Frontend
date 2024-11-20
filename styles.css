@@ -1,0 +1,312 @@
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    margin: 20px auto;
+    padding: 10px;
+    max-width: 800px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+.calendar-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.day-name {
+    text-align: center;
+    font-weight: bold;
+    padding: 10px 0;
+    background-color: #f1f3f5;
+    border-bottom: 2px solid #e9ecef;
+    color: #333;
+    grid-column: span 1;
+}
+
+.day {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.day:hover {
+    background-color: #e9ecef;
+    transform: translateY(-5px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.day.empty {
+    background-color: transparent;
+    border: none;
+    cursor: default;
+    height: 60px;
+}
+
+button, .btn {
+    transition: all 0.3s ease;
+}
+
+button:hover, .btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.animate-btn {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.animate-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#filterForm .form-control {
+    border: none;
+    border-bottom: 2px solid #ccc;
+    border-radius: 0;
+    padding: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    background-color: transparent;
+}
+
+#filterForm .form-control:focus {
+    border-bottom: 2px solid #007bff; 
+    outline: none;
+    box-shadow: none;
+}
+
+#filterForm .form-label {
+    font-size: 0.9rem;
+    color: #555;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+#filterForm button {
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.event-dot {
+    width: 8px;
+    height: 8px;
+    background-color: red;
+    border-radius: 50%;
+    margin: 5px auto;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.8;
+    }
+}
+
+.modal-content {
+    border-radius: 10px;
+    overflow: hidden;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.modal-header {
+    background-color: #a7bacf;
+    color: white;
+    border-bottom: none;
+}
+
+.modal-footer {
+    background-color: #f1f3f5;
+    border-top: none;
+}
+
+.navbar {
+    background: linear-gradient(90deg, #007bff, #6610f2);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar-brand {
+    color: #fff !important;
+    font-weight: bold;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand:hover, .nav-link:hover {
+    color: #0084ff !important; 
+    text-decoration: none; 
+    transform: scale(1.1); 
+    transition: all 0.3s ease; 
+}
+
+.nav-link.active {
+    color: #62aaee !important;
+    text-shadow: 0 2px 4px rgba(255, 215, 0, 0.5);
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+.navbar-toggler:hover {
+    background-color: #0051ff; 
+    transform: rotate(90deg); 
+    transition: all 0.3s ease;
+}
+
+.nav-link {
+    color: #ffffff !important;
+    font-weight: 500;
+    margin-left: 1rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-link.active {
+    color: #ffd700 !important;
+    text-shadow: 0 2px 4px rgba(255, 215, 0, 0.5);
+    transform: scale(1.1);
+}
+
+.nav-link:hover {
+    color: #ffd700 !important;
+    transform: scale(1.05);
+}
+
+.navbar-toggler {
+    border: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar-toggler-icon {
+    background-color: #ffffff;
+    border-radius: 50%;
+    padding: 5px;
+    width: 25px;
+    height: 25px;
+}
+
+.navbar-toggler:hover {
+    transform: rotate(90deg);
+    background-color: #62aaee;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 0 15px;
+}
+
+#calendar-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: nowrap;
+}
+
+#calendar-nav button {
+    font-size: 1rem;
+    padding: 8px 15px;
+    transition: all 0.3s ease;
+}
+
+#calendar-nav h2 {
+    font-size: 1.5rem;
+    margin: 0;
+    flex-grow: 1;
+    text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    #calendar-nav {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #calendar-nav button {
+        padding: 6px 12px;
+    }
+
+    #calendar-nav h2 {
+        font-size: 1.2rem;
+    }
+
+    .day-name {
+        font-size: 0.8rem;
+        padding: 5px 0;
+    }
+
+    .day {
+        font-size: 0.8rem;
+        padding: 10px;
+    }
+
+    .calendar {
+        grid-template-columns: repeat(7, 1fr);
+        overflow-x: auto;
+    }
+
+    #filterForm .form-control {
+        font-size: 0.9rem;
+        padding: 6px;
+    }
+
+    #filterForm .form-label {
+        font-size: 0.8rem;
+    }
+
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+
+    .nav-link {
+        font-size: 0.9rem;
+        margin-left: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .calendar {
+        grid-template-columns: repeat(7, 1fr);
+        overflow-x: auto;
+    }
+
+    .day {
+        padding: 10px;
+        font-size: 0.8rem;
+    }
+
+    #calendar-nav {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    #calendar-nav h2 {
+        text-align: center;
+    }
+}
