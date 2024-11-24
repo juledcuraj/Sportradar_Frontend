@@ -1,14 +1,19 @@
  Sportradar Frontend exercise
 
  Overview
-The Sports Event Calendar is a web application designed to help users view and manage sports events seamlessly. It features a responsive calendar view, the ability to filter events based on sport or date range, and the functionality to add new events dynamically. Built using PHP, JavaScript, and Bootstrap, the application ensures a smooth and visually appealing user experience.
+The Sports Event Calendar is a web application designed to help users view and manage sports events seamlessly. It features a responsive calendar view, the ability to filter events based on sport or date range, and the functionality to add new events dynamically. Built using JavaScript, Bootstrap, and PHP, the application ensures a smooth and visually appealing user experience.
 
  Features
 - Interactive Calendar: View events by date, with filters for sport and date range.
-- Event Details: Click on any event to view its details in a dedicated page.
+- Event Details: Click on any event to view its details on a dedicated page.
 - Add Events: Add new events directly from the "Add Event" page.
 - Responsive Design: Fully optimized for desktop, tablet, and mobile devices.
-- Dynamic Modals: Seamlessly interact with modals for event details and no-event notifications.
+- Dynamic Models: Seamlessly interact with modals for event details and no-event notifications.
+
+Technologies Used
+- PHP: Backend logic and session management.
+- JavaScript: Frontend interactivity and dynamic calendar rendering.
+- Bootstrap: Styling and responsive design.
 
  How to Run the Application
 
@@ -39,10 +44,6 @@ The Sports Event Calendar is a web application designed to help users view and m
 
  Decisions
 1. Responsive Design: Built to ensure usability on small screens with features like sliders for the calendar and responsive navigation.
-2. No Database: Used PHP sessions for temporary storage to avoid complexity and ensure portability.
+2. No Database: PHP sessions are used for temporary storage to avoid complexity and ensure portability.
 3. Browser Compatibility: Focused on modern browsers for animations and responsiveness.
 
- Future Enhancements
-- Add persistent data storage using a database like MySQL.
-- Implement user authentication for personalized event management.
-- Enhance filtering options (e.g., by team or stage).
